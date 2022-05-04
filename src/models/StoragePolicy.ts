@@ -7,7 +7,7 @@ export interface StoragePolicy {
   online: boolean;
   friendlyName: string;
   secret?: string;
-  config?: object;
+  config: Map<string, unknown>;
 }
 
 const schema = new mg.Schema<StoragePolicy>(

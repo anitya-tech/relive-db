@@ -5,7 +5,7 @@ export interface StorageFile {
   key: string;
   size: number;
   hash: string;
-  remarks: object;
+  remarks: Map<string, unknown>;
 }
 
 const schema = new mg.Schema<StorageFile>(
