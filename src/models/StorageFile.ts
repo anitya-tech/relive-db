@@ -34,5 +34,7 @@ const schema = new mg.Schema<StorageFile>(
   { timestamps: true }
 );
 
+schema.index({ storagePolicy: 1, key: -1 }, { unique: true });
+
 export const create = (conn: mg.Connection) =>
   conn.model<StorageFile>("StorageFile", schema, "StorageFile");
